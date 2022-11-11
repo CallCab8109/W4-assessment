@@ -1,10 +1,4 @@
 module.exports = {
-    // wow: (req, res) => {
-    //     const {customWow} = req.body
-    //     database.push(newDatabaseEntry)
-    //     res.status(200).send({success: true})
-    //     console.log(database)
-    // },
 
 
     getCompliment: (req, res) => {
@@ -49,11 +43,51 @@ module.exports = {
         let randomQuote = quote[randomIndex]
 
         res.status(200).send(randomQuote)
-    }
-}
+    },
+    getName: (req, res) => {
+        const name = [
+            "John",
+            "Carter",
+            "Madalyn",
+            "Kennedi",
+            "Taylor",
+            "Madi",
+            "Nohea"
+        ]
+        let randomIndex = Math.floor(Math.random() * name.length)
+        let randomName = name[randomIndex]
 
-// const database = [
-//     {
-//         customWow:'asdfgh'
-//     }
-// ]
+        res.status(200).send(randomName)
+
+},
+    getFood: (req, res) => {
+        const food = [
+            "banana",
+            "cheese burger",
+            "spaghetti",
+            "noodles",
+            "pasta",
+            "bread"
+        ]
+        let randomIndex = Math.floor(Math.random() * food.length)
+        let randomFood = food[randomIndex]
+
+        res.status(200).send(randomFood)
+
+},
+    getHobby: (req, res) => {
+        const hobby = [
+            "biking",
+            "hiking",
+            "swimming",
+            "coding",
+            "going to the gym",
+            "working on cars"
+        ]
+        let randomIndex = Math.floor(Math.random() * hobby.length)
+        let randomHobby = hobby[randomIndex]
+
+        res.status(200).send(randomHobby)
+
+}
+}
